@@ -39,8 +39,8 @@
 			</ul>
 			<ul class="side-nav" id="mobile">
 				<li><a href="#" class="active">
-						<div class="col s12 m3 valign-wrapper">
-							<img src="img/profile-s.png" alt="Edgar Xolop" class="circle "><span class="valign">&nbsp;&nbsp;Edgar Xolop</span>
+						<div class="col s12 m3 valign-wrapper" >
+							<img src="img/profile-s.png" alt="Edgar Xolop" class="circle"><span class="valign">&nbsp;&nbsp;Edgar Xolop</span>
 						</div>		
 				</a></li>
 				<li><a href="#">Recursos</a></li>
@@ -53,10 +53,10 @@
 	  <header class="hide-on-small-only header-me valign-wrapper">
 	  	<div class="col m12 l12 valign">
 	  		<div class="row " style="height: 100%">
-	  			<div class="col m3 l3" >
-					<img src="img/profile.png" alt="Edgar Xolop" class="circle responsive-img">
+	  			<div class="col m4 l3" >
+					<img src="img/profile.png" alt="Edgar Xolop" class="circle responsive-img" id="me">
 	  			</div>
-	  			<div class="col m9 l9 ">
+	  			<div class="col m8 l8" id="aboutMe">
 	  				<div class="card-panel"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem temporibus necessitatibus quos velit officiis porro possimus aspernatur recusandae dicta ea quisquam voluptates, ratione officia quis numquam! Odio nemo amet nobis vel voluptatum, iure cupiditate. Repudiandae voluptatum veniam, ducimus quidem aliquid omnis numquam veritatis sapiente quisquam perferendis ex minima aliquam officia delectus unde deleniti commodi tempora, fugiat placeat modi qui architecto quas odio distinctio. Ratione maxime, ex repellendus atque! Qui placeat, quia consequatur voluptas dignissimos, aperiam quas nobis at! Recusandae, cumque, nemo. Cupiditate modi dolor fuga ratione nostrum! Culpa accusamus, doloribus nesciunt repellat sit odit. Reiciendis earum a tenetur incidunt, consequuntur.</span></div>
 	  			</div>
 	  		</div>
@@ -115,6 +115,10 @@
       <script type="text/javascript" src="js/materialize.js"></script>
       <script >
       		$('.button-collapse').sideNav();
+			$( '#me' ).height($('#aboutMe').height());
+      		$( window ).resize(function() {
+				$( '#me' ).height($('#aboutMe').height());
+			});
       </script>
     </body>
   </html>
