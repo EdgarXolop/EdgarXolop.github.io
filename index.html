@@ -17,7 +17,7 @@
 		<nav class="nav has-shadow" >
 			<div class="container">
 				<div class="nav-left">
-					<a class="nav-item">Edgar Xolop</a>
+					<a href="" class="nav-item">Edgar Xolop</a>
 					<router-link class="nav-item is-tab is-hidden-mobile" :class="{'is-active': (route.path == location.path)}" v-for="route in routes" :to="route.path" @click.native="setRoute(route)">{{route.label}}</router-link>
 				</div>
 				<span class="nav-toggle" :class="{'is-active': toggleIsActive}" @click="toggleButton()">
