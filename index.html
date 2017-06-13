@@ -13,27 +13,23 @@
 	</style>
 </head>
 <body>
-	<nav class="nav has-shadow">
+	<nav class="nav has-shadow" id="menu">
 		<div class="container">
 			<div class="nav-left">
 				<a class="nav-item">Edgar Xolop</a>
-				<a class="nav-item is-tab is-hidden-mobile is-active">About</a>
-				<a class="nav-item is-tab is-hidden-mobile">Portafolio</a>
-				<a class="nav-item is-tab is-hidden-mobile">Contact</a>
-				<a class="nav-item is-tab is-hidden-mobile">Certifications</a>
+				<a class="nav-item is-tab is-hidden-mobile" :class="{'is-active': (route.path == location.path)}" v-for="route in routes" @click="setRoute(route)">{{route.label}}</a>
 			</div>
-			<span class="nav-toggle is-active">
+			<span class="nav-toggle" :class="{'is-active': toggleIsActive}" @click="toggleButton()">
 				<span></span>
 				<span></span>
 				<span></span>
 			</span>
-			<div class="nav-right nav-menu is-active">
-				<a class="nav-item is-tab is-hidden-tablet is-active">About</a>
-				<a class="nav-item is-tab is-hidden-tablet">Portafolio</a>
-				<a class="nav-item is-tab is-hidden-tablet">Contact</a>
-				<a class="nav-item is-tab is-hidden-tablet">Certifications</a>
+			<div class="nav-right nav-menu" :class="{'is-active': toggleIsActive}">
+				<a class="nav-item is-tab is-hidden-tablet" :class="{'is-active': (route.path == location.path)}" v-for="route in routes" @click="setRoute(route)">{{route.label}}</a>
 			</div>
 		</div>
 	</nav>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
