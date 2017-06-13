@@ -18,7 +18,7 @@
 			<div class="container">
 				<div class="nav-left">
 					<a class="nav-item">Edgar Xolop</a>
-					<router-link class="nav-item is-tab is-hidden-mobile" :class="{'is-active': (route.path == location.path)}" v-for="route in routes" :to="route.path" @click="setRoute(route)">{{route.label}}</router-link>
+					<router-link class="nav-item is-tab is-hidden-mobile" :class="{'is-active': (route.path == location.path)}" v-for="route in routes" :to="route.path" @click.native="setRoute(route)">{{route.label}}</router-link>
 				</div>
 				<span class="nav-toggle" :class="{'is-active': toggleIsActive}" @click="toggleButton()">
 					<span></span>
@@ -26,7 +26,7 @@
 					<span></span>
 				</span>
 				<div class="nav-right nav-menu" :class="{'is-active': toggleIsActive}">
-					<router-link class="nav-item is-tab is-hidden-tablet" :class="{'is-active': (route.path == location.path)}" v-for="route in routes" :to="route.path" @click="setRoute(route)">{{route.label}}</router-link>
+					<router-link class="nav-item is-tab is-hidden-tablet" :class="{'is-active': (route.path == location.path)}" v-for="route in routes" :to="route.path" @click.native="setRoute(route)">{{route.label}}</router-link>
 				</div>
 			</div>
 		</nav>
