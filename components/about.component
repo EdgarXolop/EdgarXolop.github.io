@@ -1,0 +1,16 @@
+<section class="hero is-small is-primary is-blod">
+	<div class="hero-body">
+		<div class="container">
+			<figure  class="image is-128x128">
+				<img src="img/edgarxolop.png" alt="edgarxolop">
+			</figure>
+			<h1 class="title">Edgar Xolop</h1>
+			<h2 class="subtitle">WebDeveloper</h2>
+			<div class="content">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur vitae voluptatibus corrupti incidunt excepturi, accusantium aperiam praesentium beatae. Omnis sequi totam nihil dolorem praesentium hic, amet fuga quibusdam delectus ducimus porro neque deleniti quos eum architecto debitis veniam, tempore modi eaque ipsa. Voluptatum facilis, ut cum. Harum sit inventore perspiciatis. Ex odio possimus tempore dolorum. Omnis saepe adipisci pariatur magni ad, blanditiis voluptate! Molestiae odit eos quis eum, consectetur commodi iusto numquam magnam possimus hic labore aliquam tempora voluptatibus, magni voluptatum sed ducimus autem ipsa blanditiis enim veritatis. Cum eaque numquam voluptate sunt sapiente. Voluptatem vero quis eaque inventore porro harum minima possimus repellat maxime, vitae dolore quos doloribus reprehenderit, ipsa! Aspernatur facere provident nisi modi quibusdam delectus, velit eveniet at laudantium! Laudantium fugit et quis delectus est autem, dolores, quod sunt voluptates? Voluptatem delectus atque quasi ipsam repellat fuga sunt odit, pariatur illo nostrum autem, nesciunt necessitatibus asperiores veritatis soluta, quos repudiandae. Voluptatum rem ipsum est praesentium nisi nemo inventore exercitationem vero officia molestias neque at odio, earum deleniti, a aliquid sed facilis reiciendis, voluptates nam corporis quos dolorem, dolore accusantium! In alias doloribus, ut architecto, ipsum esse ipsa, aut dolor veritatis sequi nemo porro voluptatum exercitationem a mollitia?
+				</p>
+			</div>
+		</div>
+	</div>
+</section>

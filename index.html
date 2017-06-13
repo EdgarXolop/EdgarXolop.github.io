@@ -3,13 +3,13 @@
 <head>
 	<title>Edgar Xolop</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/bulma.min.css">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style type="text/css">
+	<link rel="stylesheet" href="css/bulma.min.css">
+	<style>
 		html{
-			overflow-y: hidden;
-		}		
+			overflow-y: auto;
+		}
 	</style>
 </head>
 <body>
@@ -17,7 +17,7 @@
 		<div class="container">
 			<div class="nav-left">
 				<a class="nav-item">Edgar Xolop</a>
-				<a class="nav-item is-tab is-hidden-mobile" :class="{'is-active': (route.path == location.path)}" v-for="route in routes" @click="setRoute(route)">{{route.label}}</a>
+				<router-link class="nav-item is-tab is-hidden-mobile" :class="{'is-active': (route.path == location.path)}" v-for="route in routes" :to="route.path" @click="setRoute(route)">{{route.label}}</router-link>
 			</div>
 			<span class="nav-toggle" :class="{'is-active': toggleIsActive}" @click="toggleButton()">
 				<span></span>
@@ -25,11 +25,16 @@
 				<span></span>
 			</span>
 			<div class="nav-right nav-menu" :class="{'is-active': toggleIsActive}">
-				<a class="nav-item is-tab is-hidden-tablet" :class="{'is-active': (route.path == location.path)}" v-for="route in routes" @click="setRoute(route)">{{route.label}}</a>
+				<router-link class="nav-item is-tab is-hidden-tablet" :class="{'is-active': (route.path == location.path)}" v-for="route in routes" :to="route.path" @click="setRoute(route)">{{route.label}}</router-link>
 			</div>
 		</div>
+		<router-view></router-view>
 	</nav>
+	<div id="component">
+	</div>
 	<script type="text/javascript" src="js/vue.min.js"></script>
+	<script type="text/javascript" src="js/vue-resource.min.js"></script>
+	<script type="text/javascript" src="js/vue-router.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
