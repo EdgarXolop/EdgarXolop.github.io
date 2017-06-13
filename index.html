@@ -13,24 +13,24 @@
 	</style>
 </head>
 <body>
-	<nav class="nav has-shadow" id="menu">
-		<div class="container">
-			<div class="nav-left">
-				<a class="nav-item">Edgar Xolop</a>
-				<router-link class="nav-item is-tab is-hidden-mobile" :class="{'is-active': (route.path == location.path)}" v-for="route in routes" :to="route.path" @click="setRoute(route)">{{route.label}}</router-link>
+	<div id="app">
+		<nav class="nav has-shadow" >
+			<div class="container">
+				<div class="nav-left">
+					<a class="nav-item">Edgar Xolop</a>
+					<router-link class="nav-item is-tab is-hidden-mobile" :class="{'is-active': (route.path == location.path)}" v-for="route in routes" :to="route.path" @click="setRoute(route)">{{route.label}}</router-link>
+				</div>
+				<span class="nav-toggle" :class="{'is-active': toggleIsActive}" @click="toggleButton()">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+				<div class="nav-right nav-menu" :class="{'is-active': toggleIsActive}">
+					<router-link class="nav-item is-tab is-hidden-tablet" :class="{'is-active': (route.path == location.path)}" v-for="route in routes" :to="route.path" @click="setRoute(route)">{{route.label}}</router-link>
+				</div>
 			</div>
-			<span class="nav-toggle" :class="{'is-active': toggleIsActive}" @click="toggleButton()">
-				<span></span>
-				<span></span>
-				<span></span>
-			</span>
-			<div class="nav-right nav-menu" :class="{'is-active': toggleIsActive}">
-				<router-link class="nav-item is-tab is-hidden-tablet" :class="{'is-active': (route.path == location.path)}" v-for="route in routes" :to="route.path" @click="setRoute(route)">{{route.label}}</router-link>
-			</div>
-		</div>
+		</nav>
 		<router-view></router-view>
-	</nav>
-	<div id="component">
 	</div>
 	<script type="text/javascript" src="js/vue.min.js"></script>
 	<script type="text/javascript" src="js/vue-resource.min.js"></script>

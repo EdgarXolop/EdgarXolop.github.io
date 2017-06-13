@@ -31,7 +31,7 @@ Vue.component('about', function (resolve, reject) {
 
 var menu = new Vue({
 	router,
-	el: '#menu',
+	el: '#app',
 	data: {
 		toggleIsActive: false,
 		routes: ROUTES,
@@ -44,5 +44,8 @@ var menu = new Vue({
 		setRoute: function(route){
 			this.location = route;
 		}
+	},
+	mounted : function(){
+		router.replace(this.location.path);
 	}
 });
